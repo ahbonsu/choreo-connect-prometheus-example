@@ -1,0 +1,22 @@
+openapi: 3.0.0
+info:
+  title: httpbin-test
+  version: 1.0.0
+x-wso2-basepath: /httpbin-test/1.0.0
+x-wso2-production-endpoints: 
+  urls:
+    - http://httpbin.org
+paths:
+  /get:
+    get:
+      summary: Get request example
+      description: Sends a GET request to httpbin.org/get
+      x-auth-type: "None"
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+
